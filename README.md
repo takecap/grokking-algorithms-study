@@ -1,1 +1,3 @@
-"# grokking-algorithms-study" 
+# grokking-algorithms-study
+
+## 第1章あれもこれもアルゴリズム
