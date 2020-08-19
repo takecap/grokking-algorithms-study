@@ -10,7 +10,7 @@ class Ch02Tests(unittest.TestCase):
 
     for target_list, expected in test_params:
       with self.subTest(arr=target_list):
-        self.assertEqual(ch04.sum(target_list), expected)
+        self.assertAlmostEqual(ch04.sum(target_list), expected)
   
   def test_quickSort(self):
     test_params = [
