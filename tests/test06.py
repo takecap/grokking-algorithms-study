@@ -3,12 +3,14 @@ from src import ch06
 
 class Ch06Tests(unittest.TestCase):
   def test_searchMangoSeller(self):
+    friends_graph = ch06.friends_graph
     test_params = [
-      ('you', True),
-      ('bob', False),
-      ('claire', True)
+      ('you', friends_graph, True),
+      ('bob', friends_graph, False),
+      ('claire', friends_graph, True),
+      ('claire', { 'claire': ['meary', 'henrym'], 'meary': [], 'henrym': [] }, True)
     ]
 
-    for target, expected in test_params:
+    for target, graph, expected in test_params:
       with self.subTest(name=target):
-        self.assertEqual(ch06.searchMangoSeller(target), expected)
+        self.assertEqual(ch06.searchMangoSeller(target, graph), expected)

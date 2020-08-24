@@ -10,21 +10,20 @@ friends_graph['thom'] = []
 
 from collections import deque
 
-def searchMangoSeller(name):
-  if not name.lower() in friends_graph:
+def searchMangoSeller(name, graph=friends_graph):
+  if not name.lower() in graph:
     return False
   search_queue = deque()
-  search_queue += friends_graph[name.lower()]
+  search_queue += graph[name.lower()]
   searched = []
   while search_queue:
     person = search_queue.popleft()
-#    print(person)
     if not person in searched:
       if isMangoSeller(person):
         print(person + ' is a mango seller!')
         return True
       else:
-        search_queue += friends_graph[person]
+        search_queue += graph[person]
         searched.append(person)
   return False
 
