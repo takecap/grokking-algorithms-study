@@ -23,8 +23,15 @@ def init_tables(graph):
       parents[node] = None
   return costs, parents
 
-def findLowestCostNode(costs):
-  return ''
+def findLowestCostNode(costs, processed):
+  lowest_cost = infinity
+  lowest_node = None
+  for node in costs:
+    cost = costs[node]
+    if cost < lowest_cost and node not in processed:
+      lowest_cost = cost
+      lowest_node = node
+  return lowest_node
 
 def searchDijkstra(graph):
   costs, _ = init_tables(graph)
