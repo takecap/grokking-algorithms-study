@@ -5,9 +5,9 @@ graph_piano = {
   'start': {'lp': 5, 'poster': 0},
   'lp': {'base': 15, 'drum': 20},
   'poster': {'base': 30, 'drum': 35},
-  'base': {'piano': 20},
-  'drum': {'piano': 10},
-  'piano': {}
+  'base': {'finish': 20},
+  'drum': {'finish': 10},
+  'finish': {}
 }
 graph_A = {
   'start': {'a': 5, 'b': 2},
@@ -40,5 +40,13 @@ class Ch07Tests(unittest.TestCase):
         self.assertEqual(ch07.findLowestCostNode(table, processed), expected)
   
   def test_searchDijkstra(self):
-    infinity = float('inf')
-    return infinity
+    test_params = [
+      (ch07.graph, 6),
+      (graph_piano, 35),
+      (graph_A, 8),
+      (graph_B, 60)
+    ]
+    for graph, expected in test_params:
+      costs, _ = ch07.init_tables(graph)
+      with self.subTest(costs=costs):
+        self.assertEqual(ch07.searchDijkstra(graph), expected)

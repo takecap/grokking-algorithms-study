@@ -35,4 +35,4 @@ def findLowestCostNode(costs, processed):
 
 def searchDijkstra(graph):
   costs, _ = init_tables(graph)
-  return costs
+  return costs['finish']
