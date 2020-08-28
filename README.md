@@ -18,4 +18,9 @@
 ## 第６章 グラフを作れば見えてくる：幅優先探索
 - searchMangoSeller関数
 
-## 本からピアノへ物々交換大作戦：ダイクストラ法
+## 第７章 本からピアノへ物々交換大作戦：ダイクストラ法
+- findLowestCostNode関数
+- searchDijkstra関数
+
+## 第８章 問題は続くよどこまでも：貪欲法
+- greedySetCover関数
