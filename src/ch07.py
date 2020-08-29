@@ -34,5 +34,17 @@ def findLowestCostNode(costs, processed):
   return lowest_node
 
 def searchDijkstra(graph):
-  costs, _ = init_tables(graph)
+  costs, parents = init_tables(graph)
+  processed = []
+  node = findLowestCostNode(costs, processed)
+  while node is not None:
+    cost = costs[node]
+    neighbors = graph[node]
+    for n in neighbors.keys():
+      new_cost = cost + neighbors[n]
+      if costs[n] > new_cost:
+        costs[n] = new_cost
+        parents[n] = node
+    processed.append(node)
+    node = findLowestCostNode(costs, processed)
   return costs['finish']
