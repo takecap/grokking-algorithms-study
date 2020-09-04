@@ -11,5 +11,4 @@ def greedySetCover(states_needed, stations):
         states_covered = covered
     final_stations.add(best_station)
     states_needed -= states_covered
-#    print(best_station, states_covered)
   return final_stations
