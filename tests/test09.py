@@ -6,7 +6,7 @@ class Ch09Tests(unittest.TestCase):
     test_params = [
       ({'guitar': (1500, 1), 'stereo': (3000, 4), 'laptop': (2000, 3)}, 4, 1, {'guitar', 'laptop'}),
       ({'guitar': (1500, 1), 'stereo': (3000, 4), 'laptop': (2000, 3), 'iphone': (2000, 1)}, 4, 1, {'iphone', 'laptop'}),
-      ({'wm': (7, 0.5), 'gt': (6, 0.5), 'ng': (9, 1), 'bm': (9, 2), 'cc': (8, 0.5)}, 4, 1, {'wm', 'ng', 'cc'})
+      ({'wm': (7, 0.5), 'gt': (6, 0.5), 'ng': (9, 1), 'bm': (9, 2), 'cc': (8, 0.5)}, 2, 0.5, {'wm', 'ng', 'cc'})
     ]
     
     for items, capa, unit, expected in test_params:
