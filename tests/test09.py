@@ -20,3 +20,14 @@ class Ch09Tests(unittest.TestCase):
     for items, capa, unit, expected in test_params:
       with self.subTest(items=items, capacity=capa, unit=unit):
         self.assertEqual(ch09.solveKnapsackProblem(items, capa, unit), expected)
+  
+  def test_solveLCSubsequence(self):
+    test_params = [
+      ('fosh', 'fish', 3),
+      ('fosh', 'fort', 2),
+      ('blue', 'clues', 3)
+    ]
+    
+    for str1, str2, expected in test_params:
+      with self.subTest(string1=str1, string2=str2):
+        self.assertEqual(ch09.solveLCSubsequence(str1, str2), expected)

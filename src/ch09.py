@@ -18,3 +18,6 @@ def solveKnapsackProblem(items, capacity, unit=1):
 
 def evalValue(items, itemSet):
   return sum([items[key][0] for key in itemSet])
+
+def solveLCSubsequence(string1, string2):
+  return 0
