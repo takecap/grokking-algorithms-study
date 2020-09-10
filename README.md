@@ -24,3 +24,7 @@
 
 ## 第８章 問題は続くよどこまでも：貪欲法
 - greedySetCover関数
+
+## 第９章 ドロボーは計画的に：動的計画法
+- solveKnapsackProblem関数
+- solveLCS関数
